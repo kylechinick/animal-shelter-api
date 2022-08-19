@@ -50,7 +50,7 @@ namespace AnimalShelterApi.Migrations
                             AnimalId = 1,
                             Age = 2,
                             Gender = "Male",
-                            Name = "Al",
+                            Name = "Albert",
                             Species = "Dog"
                         },
                         new
@@ -91,6 +91,14 @@ namespace AnimalShelterApi.Migrations
                             Age = 32,
                             Gender = "Male",
                             Name = "Turbo",
+                            Species = "Narwhal"
+                        },
+                        new
+                        {
+                            AnimalId = 7,
+                            Age = 28,
+                            Gender = "Male",
+                            Name = "Lazer",
                             Species = "Narwhal"
                         });
                 });
