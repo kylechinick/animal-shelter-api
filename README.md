@@ -1,8 +1,16 @@
 # Animal Shelter API
 
-- Authored by Kyle Chinick
+Authored by Kyle Chinick
 
-API that holds a list of animals currently available for adoption at a fictional animal shelter.
+## Contents
+
+[Summary](#summary) | [Technologies](#technologies) | [Setup](#setup) | [Usage](#usage) | [Bugs](#bugs) | [License](#license)
+
+## Summary
+
+This API contains a list of animals currently available for adoption at a fictional animal shelter.
+
+You can access the API data through a web browser or an API platform like [Postman](https://www.postman.com/).
 
 ## Technologies
 
@@ -10,85 +18,6 @@ API that holds a list of animals currently available for adoption at a fictional
 - _Entity Framework Core_
 - _CSHTML / RAZOR / LINQ_
 - _Swagger / Swashbuckle_
-
-## Summary
-
-The endpoints for this app can be reached through a web browser or an API platform like [Postman](https://www.postman.com/).
-
-After launching the app, as described below, navigate to `http://localhost:5000/api/Animals/` in your browser or send the URL as a GET request in Postman to receive a list of all animals currently in the shelter.
-
-You can refine your results by specififying the ID of the record you want to view. For instance, a GET request with the path `http://localhost:5000/api/Animals/2` will return only the animal with an ID of 2.
-
-Alternately, you can refine the API response data by adding parameters to a query string and speciying the parameter value you would like to be returned in the API response.
-
-### Parameters
-
-- AnimalId
-- Name
-- Species
-- Age
-- Gender
-
-### Example Request with Parameters
-
-```Shell
-http://localhost:5000/api/Animals?gender=male&species=narwhal
-```
-
-### Example Response to Request with Parameters
-
-```JSON
-[
-  {
-    "animalId": 6,
-    "name": "Turbo",
-    "species": "Narwhal",
-    "age": 32,
-    "gender": "Male"
-  },
-  {
-    "animalId": 7,
-    "name": "Lazer",
-    "species": "Narwhal",
-    "age": 28,
-    "gender": "Male"
-  }
-]
-```
-
-Additionally, users can view API data through an auto-generated UI, built out by the tool Swagger, by navigating to `http://localhost:5000/swagger/index.html` in a browser. The Swagger-generated UI shows each endpoint as an interactive block that can be expanded to send actual CRUD reqests through the app instead of doing so through the browser URL or Postman.
-
-### Endpoints
-
-Base URL: `https://localhost:5000/Animals`
-
-#### HTTP Request Structure
-
-```Shell
-GET /api/Animals
-POST /api/Animals
-GET /api/Animals/{id}
-PUT /api/Animals/{id}
-DELETE /api/Animals/{id}
-```
-
-#### Example Query
-
-```Shell
-https://localhost:5000/api/Animals/2
-```
-
-#### Example JSON Response
-
-```JSON
-{
-  "animalId": 2,
-  "name": "Bob",
-  "species": "Panda",
-  "age": 8,
-  "gender": "Unknown"
-}
-```
 
 ## Setup
 
@@ -142,6 +71,103 @@ https://localhost:5000/api/Animals/2
    `dotnet ef database update`
 
 9. To run the app execute `dotnet run` from the project directory or, optionally, `dotnet watch run` to start the app and cause it to rebuild and run after each saved change to the codebase.
+
+## Usage
+
+### Viewing Response Data
+
+#### Browser
+
+After launching the app navigate to `http://localhost:5000/api/Animals/` in the browser of your choice to receieve a response object containing all animals currently available for adoption.
+
+or send the URL as a GET request in Postman to receive a list of all animals currently in the shelter.
+
+![Alt text](./assets/img/Browser.png?raw=true 'Browser Response Example')
+
+#### API Platform
+
+Send a GET request with the same URL (`http://localhost:5000/api/Animals/`) through [Postman](https://www.postman.com/) or another API platform of your choice. This GET request will also return a list of all animals currently in the shelter.
+
+![Alt text](./assets/img/Postman.png?raw=true 'Postman Response Example')
+
+#### SwaggerUI
+
+Additionally, users can view API data through an auto-generated UI, built out by the tool [Swagger](https://github.com/domaindrivendev/Swashbuckle.AspNetCore), by navigating to `http://localhost:5000/swagger/index.html` in a browser. The Swagger-generated UI shows each endpoint as an interactive block that can be expanded to send actual CRUD reqests through the app instead of doing so through the browser URL or Postman.
+
+![Alt text](./assets/img/SwaggerUI.png?raw=true 'Browser Response Example')
+
+### Refining The Response Data
+
+You can refine your results by specififying the ID of the record you want to view. For instance, a GET request with the path `http://localhost:5000/api/Animals/2` will return only the animal with an ID of 2.
+
+#### Endpoints
+
+Base URL: `https://localhost:5000/Animals`
+
+#### HTTP Request Structure
+
+```Shell
+GET /api/Animals
+POST /api/Animals
+GET /api/Animals/{id}
+PUT /api/Animals/{id}
+DELETE /api/Animals/{id}
+```
+
+#### Example Query
+
+```Shell
+https://localhost:5000/api/Animals/2
+```
+
+#### Example JSON Response
+
+```JSON
+{
+  "animalId": 2,
+  "name": "Bob",
+  "species": "Panda",
+  "age": 8,
+  "gender": "Unknown"
+}
+```
+
+Alternately, you can refine the API response data by adding parameters to a query string and speciying the parameter value you would like to be returned in the API response.
+
+### Parameters
+
+- AnimalId
+- Name
+- Species
+- Age
+- Gender
+
+### Example Request with Parameters
+
+```Shell
+http://localhost:5000/api/Animals?gender=male&species=narwhal
+```
+
+### Example Response to Request with Parameters
+
+```JSON
+[
+  {
+    "animalId": 6,
+    "name": "Turbo",
+    "species": "Narwhal",
+    "age": 32,
+    "gender": "Male"
+  },
+  {
+    "animalId": 7,
+    "name": "Lazer",
+    "species": "Narwhal",
+    "age": 28,
+    "gender": "Male"
+  }
+]
+```
 
 ## Bugs
 
