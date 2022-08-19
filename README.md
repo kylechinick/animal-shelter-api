@@ -1,17 +1,17 @@
-# ANIMAL SHELTER API
+# Animal Shelter API
 
-_Authored by Kyle Chinick_
+- Authored by Kyle Chinick
 
 API that holds a list of animals currently available for adoption at a fictional animal shelter.
 
-## TECHNOLOGIES
+## Technologies
 
 - _C# / .NET 6.0_
 - _Entity Framework Core_
 - _CSHTML / RAZOR / LINQ_
 - _Swagger / Swashbuckle_
 
-## DESCRIPTION
+## Summary
 
 The endpoints for this app can be reached through a web browser or an API platform like [Postman](https://www.postman.com/).
 
@@ -21,11 +21,11 @@ You can refine your results by adding queries. For instance, a GET request with 
 
 Additionally, users can view API data through an auto-generated UI, built out by the tool Swagger, by navigating to `http://localhost:5000/swagger/index.html` in a browser. The Swagger-generated UI shows each endpoint as an interactive block that can be expanded to send actual CRUD reqests through the app instead of doing so through the browser URL or Postman.
 
-### ENDPOINTS
+### Endpoints
 
 Base URL: `https://localhost:5000/Animals`
 
-#### HTTP REQUEST STRUCTURE
+#### HTTP Request Structure
 
 ```Shell
 GET /api/Animals
@@ -35,13 +35,13 @@ PUT /api/Animals/{id}
 DELETE /api/Animals/{id}
 ```
 
-#### EXAMPLE QUERY
+#### Example Query
 
 ```Shell
 https://localhost:5000/api/Animals/2
 ```
 
-#### EXAMPLE JSON RESPONSE
+#### Example JSON Response
 
 ```JSON
 {
@@ -53,7 +53,7 @@ https://localhost:5000/api/Animals/2
 }
 ```
 
-## SETUP
+## Setup
 
 1. Clone this repository to your desktop by running the following command in your preferred terminal application:
 
@@ -106,11 +106,11 @@ https://localhost:5000/api/Animals/2
 
 9. To run the app execute `dotnet run` from the project directory or, optionally, `dotnet watch run` to start the app and cause it to rebuild and run after each saved change to the codebase.
 
-## BUGS
+## Bugs
 
 - N/A
 
-## LICENSE
+## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Copyright (C) 2022 Kyle Chinick. All Rights Reserved.
 
