@@ -5,22 +5,24 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
+#nullable disable
+
 namespace AnimalShelterApi.Migrations
 {
     [DbContext(typeof(AnimalShelterApiContext))]
-    [Migration("20220819171707_Initial")]
-    partial class Initial
+    [Migration("20220819180942_Seed1")]
+    partial class Seed1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("Relational:MaxIdentifierLength", 64)
-                .HasAnnotation("ProductVersion", "5.0.0");
+                .HasAnnotation("ProductVersion", "6.0.8")
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("AnimalShelterApi.Models.Pet", b =>
+            modelBuilder.Entity("AnimalShelterApi.Models.Animal", b =>
                 {
-                    b.Property<int>("PetId")
+                    b.Property<int>("AnimalId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -29,25 +31,25 @@ namespace AnimalShelterApi.Migrations
 
                     b.Property<string>("Gender")
                         .IsRequired()
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(20)
-                        .HasColumnType("varchar(20) CHARACTER SET utf8mb4");
+                        .HasColumnType("varchar(20)");
 
                     b.Property<string>("Species")
                         .IsRequired()
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+                        .HasColumnType("longtext");
 
-                    b.HasKey("PetId");
+                    b.HasKey("AnimalId");
 
-                    b.ToTable("Pets");
+                    b.ToTable("Animals");
 
                     b.HasData(
                         new
                         {
-                            PetId = 1,
+                            AnimalId = 1,
                             Age = 7,
                             Gender = "Male",
                             Name = "Al",
@@ -55,34 +57,34 @@ namespace AnimalShelterApi.Migrations
                         },
                         new
                         {
-                            PetId = 2,
+                            AnimalId = 2,
                             Age = 10,
                             Gender = "Unknown",
-                            Name = "Bobbi",
+                            Name = "Bob",
                             Species = "Panda"
                         },
                         new
                         {
-                            PetId = 3,
+                            AnimalId = 3,
                             Age = 2,
-                            Gender = "Male",
+                            Gender = "Female",
                             Name = "Charlie",
                             Species = "Cat"
                         },
                         new
                         {
-                            PetId = 4,
+                            AnimalId = 4,
                             Age = 4,
                             Gender = "Female",
-                            Name = "La Rata Alta",
-                            Species = "Chihuahua"
+                            Name = "Diana",
+                            Species = "Capybara"
                         },
                         new
                         {
-                            PetId = 5,
+                            AnimalId = 5,
                             Age = 22,
                             Gender = "Male",
-                            Name = "Buddy",
+                            Name = "Turbo",
                             Species = "Narwhal"
                         });
                 });

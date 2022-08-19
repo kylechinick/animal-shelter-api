@@ -11,15 +11,16 @@ namespace AnimalShelterApi.Models
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-      builder.Entity<Pet>()
+      builder.Entity<Animal>()
         .HasData(
-            new Pet { PetId = 1, Name = "Al", Species = "Dog", Age = 7, Gender = "Male" },
-            new Pet { PetId = 2, Name = "Bobbi", Species = "Panda", Age = 10, Gender = "Unknown" },
-            new Pet { PetId = 3, Name = "Charlie", Species = "Cat", Age = 2, Gender = "Male" },
-            new Pet { PetId = 4, Name = "La Rata Alta", Species = "Chihuahua", Age = 4, Gender = "Female" },
-            new Pet { PetId = 5, Name = "Buddy", Species = "Narwhal", Age = 22, Gender = "Male" }
+            new Animal { AnimalId = 1, Name = "Al", Species = "Dog", Age = 2, Gender = "Male" },
+            new Animal { AnimalId = 2, Name = "Bob", Species = "Panda", Age = 8, Gender = "Unknown" },
+            new Animal { AnimalId = 3, Name = "Charlie", Species = "Cat", Age = 8, Gender = "Female" },
+            new Animal { AnimalId = 4, Name = "Diana", Species = "Capybara", Age = 64, Gender = "Female" },
+            new Animal { AnimalId = 5, Name = "Greggory", Species = "Beholder", Age = 506, Gender = "Unknown" },
+            new Animal { AnimalId = 6, Name = "Turbo", Species = "Narwhal", Age = 32, Gender = "Male" }
         );
     }
-    public DbSet<Pet> Pets { get; set; }
+    public DbSet<Animal> Animals { get; set; }
   }
 }

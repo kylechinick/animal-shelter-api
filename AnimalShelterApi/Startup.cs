@@ -19,6 +19,7 @@ namespace AnimalShelterApi
 
     public void ConfigureServices(IServiceCollection services)
     {
+
       services.AddDbContext<AnimalShelterApiContext>(opt =>
           opt.UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
       services.AddControllers();
@@ -31,7 +32,10 @@ namespace AnimalShelterApi
         app.UseDeveloperExceptionPage();
       }
 
+      // app.UseHttpsRedirection();
+
       app.UseRouting();
+
       app.UseAuthorization();
 
       app.UseEndpoints(endpoints =>

@@ -2,6 +2,7 @@
 using AnimalShelterApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimalShelterApi.Migrations
 {
     [DbContext(typeof(AnimalShelterApiContext))]
-    partial class AnimalShelterApiContextModelSnapshot : ModelSnapshot
+    [Migration("20220819180445_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,50 +50,42 @@ namespace AnimalShelterApi.Migrations
                         new
                         {
                             AnimalId = 1,
-                            Age = 2,
-                            Gender = "Male",
-                            Name = "Al",
-                            Species = "Dog"
+                            Age = 7,
+                            Gender = "Female",
+                            Name = "Matilda",
+                            Species = "Woolly Mammoth"
                         },
                         new
                         {
                             AnimalId = 2,
-                            Age = 8,
-                            Gender = "Unknown",
-                            Name = "Bob",
-                            Species = "Panda"
+                            Age = 10,
+                            Gender = "Female",
+                            Name = "Rexie",
+                            Species = "Dinosaur"
                         },
                         new
                         {
                             AnimalId = 3,
-                            Age = 8,
+                            Age = 2,
                             Gender = "Female",
-                            Name = "Charlie",
-                            Species = "Cat"
+                            Name = "Matilda",
+                            Species = "Dinosaur"
                         },
                         new
                         {
                             AnimalId = 4,
-                            Age = 64,
-                            Gender = "Female",
-                            Name = "Diana",
-                            Species = "Capybara"
+                            Age = 4,
+                            Gender = "Male",
+                            Name = "Pip",
+                            Species = "Shark"
                         },
                         new
                         {
                             AnimalId = 5,
-                            Age = 506,
-                            Gender = "Unknown",
-                            Name = "Greggory",
-                            Species = "Beholder"
-                        },
-                        new
-                        {
-                            AnimalId = 6,
-                            Age = 32,
+                            Age = 22,
                             Gender = "Male",
-                            Name = "Turbo",
-                            Species = "Narwhal"
+                            Name = "Bartholomew",
+                            Species = "Dinosaur"
                         });
                 });
 #pragma warning restore 612, 618
