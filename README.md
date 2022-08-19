@@ -66,6 +66,7 @@ https://localhost:5000/api/Animals/2
    dotnet add package Microsoft.EntityFrameworkCore.Proxies --version 6.0.8
    dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 6.0.8
    dotnet add package Pomelo.EntityFrameworkCore.MySql --version 6.0.2
+   dotnet add package Swashbuckle.AspNetCore.SwaggerGen --version 6.2.3
    dotnet add package RestSharp --version 106.15.0
    dotnet add package Newtonsoft.Json --version 13.0.1
    ```
