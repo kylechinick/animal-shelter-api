@@ -9,6 +9,7 @@ API that holds a list of animals currently available for adoption at a fictional
 - _C# / .NET 6.0_
 - _Entity Framework Core_
 - _CSHTML / RAZOR / LINQ_
+- _Swagger / Swashbuckle_
 
 ## DESCRIPTION
 
@@ -17,6 +18,8 @@ The endpoints for this app can be reached through a web browser or an API platfo
 After launching the app, as described below, navigate to `http://localhost:5000/api/Animals/` in your browser or send the URL as a GET request in Postman to receive a list of all animals currently in the shelter.
 
 You can refine your results by adding queries. For instance, a GET request with the path `http://localhost:5000/api/Animals/2` will return only the animal with an ID of 2.
+
+Additionally, users can view API data through an auto-generated UI, built out by the tool Swagger, by navigating to `http://localhost:5000/swagger/index.html` in a browser. The Swagger-generated UI shows each endpoint as an interactive block that can be expanded to send actual CRUD reqests through the app instead of doing so through the browser URL or Postman.
 
 ### ENDPOINTS
 
@@ -67,6 +70,7 @@ https://localhost:5000/api/Animals/2
    dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 6.0.8
    dotnet add package Pomelo.EntityFrameworkCore.MySql --version 6.0.2
    dotnet add package Swashbuckle.AspNetCore.SwaggerGen --version 6.2.3
+   dotnet add package Swashbuckle.AspNetCore.ApiTesting --version 6.4.0
    dotnet add package RestSharp --version 106.15.0
    dotnet add package Newtonsoft.Json --version 13.0.1
    ```
