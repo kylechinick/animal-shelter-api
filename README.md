@@ -142,13 +142,13 @@ Alternately, you can refine the API response data by adding parameters to a quer
 - Age
 - Gender
 
-### Example Request with Parameters
+#### Example Request with Parameters
 
 ```Shell
 http://localhost:5000/api/Animals?gender=male&species=narwhal
 ```
 
-### Example Response to Request with Parameters
+#### Example Response to Request with Parameters
 
 ```JSON
 [
