@@ -37,11 +37,13 @@ namespace AnimalShelterApi.Migrations
                 columns: new[] { "AnimalId", "Age", "Gender", "Name", "Species" },
                 values: new object[,]
                 {
-                    { 1, 7, "Female", "Matilda", "Woolly Mammoth" },
-                    { 2, 10, "Female", "Rexie", "Dinosaur" },
-                    { 3, 2, "Female", "Matilda", "Dinosaur" },
-                    { 4, 4, "Male", "Pip", "Shark" },
-                    { 5, 22, "Male", "Bartholomew", "Dinosaur" }
+                    { 1, 2, "Male", "Albert", "Dog" },
+                    { 2, 8, "Unknown", "Bob", "Panda" },
+                    { 3, 8, "Female", "Charlie", "Cat" },
+                    { 4, 64, "Female", "Diana", "Capybara" },
+                    { 5, 506, "Unknown", "Greggory", "Beholder" },
+                    { 6, 32, "Male", "Turbo", "Narwhal" },
+                    { 7, 28, "Male", "Lazer", "Narwhal" }
                 });
         }
 

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimalShelterApi.Migrations
 {
     [DbContext(typeof(AnimalShelterApiContext))]
-    [Migration("20220819180942_Seed1")]
-    partial class Seed1
+    [Migration("20220819222016_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,15 +50,15 @@ namespace AnimalShelterApi.Migrations
                         new
                         {
                             AnimalId = 1,
-                            Age = 7,
+                            Age = 2,
                             Gender = "Male",
-                            Name = "Al",
+                            Name = "Albert",
                             Species = "Dog"
                         },
                         new
                         {
                             AnimalId = 2,
-                            Age = 10,
+                            Age = 8,
                             Gender = "Unknown",
                             Name = "Bob",
                             Species = "Panda"
@@ -66,7 +66,7 @@ namespace AnimalShelterApi.Migrations
                         new
                         {
                             AnimalId = 3,
-                            Age = 2,
+                            Age = 8,
                             Gender = "Female",
                             Name = "Charlie",
                             Species = "Cat"
@@ -74,7 +74,7 @@ namespace AnimalShelterApi.Migrations
                         new
                         {
                             AnimalId = 4,
-                            Age = 4,
+                            Age = 64,
                             Gender = "Female",
                             Name = "Diana",
                             Species = "Capybara"
@@ -82,9 +82,25 @@ namespace AnimalShelterApi.Migrations
                         new
                         {
                             AnimalId = 5,
-                            Age = 22,
+                            Age = 506,
+                            Gender = "Unknown",
+                            Name = "Greggory",
+                            Species = "Beholder"
+                        },
+                        new
+                        {
+                            AnimalId = 6,
+                            Age = 32,
                             Gender = "Male",
                             Name = "Turbo",
+                            Species = "Narwhal"
+                        },
+                        new
+                        {
+                            AnimalId = 7,
+                            Age = 28,
+                            Gender = "Male",
+                            Name = "Lazer",
                             Species = "Narwhal"
                         });
                 });
